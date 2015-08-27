@@ -8,6 +8,7 @@ What is "Tsukutabi"!?
  But, these process are required some accounts to use each web service.
  What do you think these process??
  We think about "Oh--! It's too troublesome!!"
+ 
  So Our Mission is to solve these problem!!
 
 How planing trip??
