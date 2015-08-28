@@ -1,5 +1,5 @@
 # Tsukutabi_iOS_by_samuraikun
-This iOS App mainly develop by samuraikun(https://github.com/samuraikun) and axeralater(https://github.com/axeralater)
+#### This iOS App mainly develop by samuraikun(https://github.com/samuraikun) and axeralater(https://github.com/axeralater)
 
 What is "Tsukutabi"!?
 
