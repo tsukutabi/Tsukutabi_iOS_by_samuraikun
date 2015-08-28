@@ -14,3 +14,42 @@ What is "Tsukutabi"!?
 How planing trip??
 
  This part will write later.....
+
+
+
+#必要の機能/及び仕様
+
+###トップページ　
+ 記事一覧の表示
+ /indexjsonから一覧が取れるのでそこを参照して下さい。
+
+post user fav commentがごそっととれる（favの数とか commentの数とか何が必要なパラメータなのか良く考える必要がある。）
+
+###個別記事ページ
+ 記事個別ページの表示
+
+/viewjson/id で表示できる
+
+
+###ユーザー機能
+ユーザーの登録/ログイン機能は基本的にwebの分を流用する。
+
+cssいじって壊れてる所があるの修正必要
+(こじまくんよろしく!!)
+
+media queryとかでレスポンシブにしてるのでまあokかなと
+
+###記事投稿機能
+こっちもwebに任せる
+
+mediaqueryがまだなのでこちらは要修正　web版参照
+
+
+
+
+
+
+
+
+
+
