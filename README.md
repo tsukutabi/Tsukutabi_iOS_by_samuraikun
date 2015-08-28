@@ -11,6 +11,6 @@ What is "Tsukutabi"!?
  
  So Our Mission is to solve these problem!!
 
-How planing trip??
+Let's share your trip and make it better 
 
- This part will write later.....
+ "Do travel ,share it"
