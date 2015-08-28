@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
         
         // MARK: - UI Setup
         
-        self.title = "TSUKUTABI_g"
+        self.title = "TSUKUTABI"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
