@@ -11,10 +11,8 @@ What is "Tsukutabi"!?
  
  So Our Mission is to solve these problem!!
 
-How planing trip??
-
- This part will write later.....
-
+Basic UI Image
+https://gyazo.com/e39fdbfcb1adc25cb201c6253a9e9276
 
 
 #必要の機能/及び仕様
