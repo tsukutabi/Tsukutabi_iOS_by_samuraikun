@@ -1,0 +1,6 @@
+framework module Pods_Tsukutabi_iOS {
+  umbrella header "Pods-Tsukutabi_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

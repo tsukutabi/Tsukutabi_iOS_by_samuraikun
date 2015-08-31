@@ -1,5 +1,5 @@
 # Tsukutabi_iOS_by_samuraikun
-This iOS App mainly develop by samuraikun(https://github.com/samuraikun) and axeralater(https://github.com/axeralater)
+#### This iOS App mainly develop by samuraikun(https://github.com/samuraikun) and axeralater(https://github.com/axeralater)
 
 What is "Tsukutabi"!?
 
@@ -11,6 +11,49 @@ What is "Tsukutabi"!?
  
  So Our Mission is to solve these problem!!
 
+<<<<<<< HEAD
 Let's share your trip and make it better 
 
  "Do travel ,share it"
+=======
+Basic UI Image
+https://gyazo.com/e39fdbfcb1adc25cb201c6253a9e9276
+
+
+#必要の機能/及び仕様
+
+###トップページ　
+ 記事一覧の表示
+ /indexjsonから一覧が取れるのでそこを参照して下さい。
+
+post user fav commentがごそっととれる（favの数とか commentの数とか何が必要なパラメータなのか良く考える必要がある。）
+
+###個別記事ページ
+ 記事個別ページの表示
+
+/viewjson/id で表示できる
+
+
+###ユーザー機能
+ユーザーの登録/ログイン機能は基本的にwebの分を流用する。
+
+cssいじって壊れてる所があるの修正必要
+(こじまくんよろしく!!)
+
+media queryとかでレスポンシブにしてるのでまあokかなと
+
+###記事投稿機能
+こっちもwebに任せる
+
+mediaqueryがまだなのでこちらは要修正　web版参照
+
+
+
+
+
+
+
+
+
+
+>>>>>>> master
