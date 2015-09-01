@@ -212,7 +212,6 @@
 				C906FB681B91F1EA00AFCF21 /* MoodCollectionViewCell.swift */,
 				F0C983BA1B95EA1200EF764F /* json.swift */,
 				C906FB691B91F1EA00AFCF21 /* MoodCollectionViewCell.xib */,
-				F0C983BC1B95EB6D00EF764F /* WebViewController.swift */,
 				C98B98011B8ED50600EE17D5 /* ArticleTableViewCell.swift */,
 				C98B98021B8ED50600EE17D5 /* ArticleTableViewCell.xib */,
 			);
@@ -225,6 +224,7 @@
 				F0C983B81B95EA0000EF764F /* swift-json-master */,
 				F0C983B61B95E97000EF764F /* PostCellViewController.swift */,
 				C931FF751B8ECE0D00D9C950 /* HomeViewController.swift */,
+				F0C983BC1B95EB6D00EF764F /* WebViewController.swift */,
 				C906FB6A1B91F1EA00AFCF21 /* TestCollectionViewController.swift */,
 				F0C983B41B95E3B500EF764F /* PostsTableViewController.swift */,
 				C906FB6B1B91F1EA00AFCF21 /* TestCollectionViewController.xib */,

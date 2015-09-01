@@ -43,7 +43,7 @@ class PostsTableViewController: UITableViewController, NSFetchedResultsControlle
             // リソースの取得が終わると、ここに書いた処理が実行される
             var json = JSON(data: data)
             //表示させるセル数
-            self.cellNum = 5
+            self.cellNum = 2
             // 各セルに情報を突っ込む
             
             for var i = 0; i < self.cellNum; i++ {

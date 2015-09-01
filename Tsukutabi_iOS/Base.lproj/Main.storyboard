@@ -68,7 +68,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKb-zD-Ghr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457.5" y="453.5"/>
+            <point key="canvasLocation" x="578.5" y="440.5"/>
         </scene>
         <!--Top-->
         <scene sceneID="4kX-C7-Ijw">
@@ -81,9 +81,18 @@
                     <view key="view" contentMode="scaleToFill" id="6z3-S7-y8w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGN-Kx-YJL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Top" id="81O-m8-ttD"/>
+                    <connections>
+                        <outlet property="webview" destination="vGN-Kx-YJL" id="Twe-8x-4rk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKk-ua-J9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
