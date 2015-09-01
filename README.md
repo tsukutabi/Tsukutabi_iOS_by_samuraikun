@@ -11,11 +11,11 @@ What is "Tsukutabi"!?
  
  So Our Mission is to solve these problem!!
 
-<<<<<<< HEAD
+HEAD
 Let's share your trip and make it better 
 
  "Do travel ,share it"
-=======
+
 Basic UI Image
 https://gyazo.com/e39fdbfcb1adc25cb201c6253a9e9276
 
@@ -56,4 +56,3 @@ mediaqueryがまだなのでこちらは要修正　web版参照
 
 
 
->>>>>>> master
