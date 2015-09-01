@@ -73,6 +73,11 @@
 		C9D98C3D1B8EE15700BE920F /* Uluru-at-sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D98C2B1B8EE15700BE920F /* Uluru-at-sunset.jpg */; };
 		C9D98C3E1B8EE15700BE920F /* WoerlitzPark_JA-JP10863194522_1366x768.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D98C2C1B8EE15700BE920F /* WoerlitzPark_JA-JP10863194522_1366x768.jpg */; };
 		C9D98C401B8EE2A000BE920F /* silicon_valley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9D98C3F1B8EE2A000BE920F /* silicon_valley.jpg */; };
+		F0C983B51B95E3B500EF764F /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C983B41B95E3B500EF764F /* PostsTableViewController.swift */; };
+		F0C983B71B95E97000EF764F /* PostCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C983B61B95E97000EF764F /* PostCellViewController.swift */; };
+		F0C983B91B95EA0000EF764F /* swift-json-master in Resources */ = {isa = PBXBuildFile; fileRef = F0C983B81B95EA0000EF764F /* swift-json-master */; };
+		F0C983BB1B95EA1200EF764F /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C983BA1B95EA1200EF764F /* json.swift */; };
+		F0C983BD1B95EB6D00EF764F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C983BC1B95EB6D00EF764F /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +163,11 @@
 		C9D98C2B1B8EE15700BE920F /* Uluru-at-sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Uluru-at-sunset.jpg"; sourceTree = "<group>"; };
 		C9D98C2C1B8EE15700BE920F /* WoerlitzPark_JA-JP10863194522_1366x768.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WoerlitzPark_JA-JP10863194522_1366x768.jpg"; sourceTree = "<group>"; };
 		C9D98C3F1B8EE2A000BE920F /* silicon_valley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silicon_valley.jpg; sourceTree = "<group>"; };
+		F0C983B41B95E3B500EF764F /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		F0C983B61B95E97000EF764F /* PostCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellViewController.swift; sourceTree = "<group>"; };
+		F0C983B81B95EA0000EF764F /* swift-json-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "swift-json-master"; sourceTree = "<group>"; };
+		F0C983BA1B95EA1200EF764F /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		F0C983BC1B95EB6D00EF764F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				C906FB681B91F1EA00AFCF21 /* MoodCollectionViewCell.swift */,
+				F0C983BA1B95EA1200EF764F /* json.swift */,
 				C906FB691B91F1EA00AFCF21 /* MoodCollectionViewCell.xib */,
+				F0C983BC1B95EB6D00EF764F /* WebViewController.swift */,
 				C98B98011B8ED50600EE17D5 /* ArticleTableViewCell.swift */,
 				C98B98021B8ED50600EE17D5 /* ArticleTableViewCell.xib */,
 			);
@@ -210,8 +222,11 @@
 		C93100011B8ECF5A00D9C950 /* View_Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F0C983B81B95EA0000EF764F /* swift-json-master */,
+				F0C983B61B95E97000EF764F /* PostCellViewController.swift */,
 				C931FF751B8ECE0D00D9C950 /* HomeViewController.swift */,
 				C906FB6A1B91F1EA00AFCF21 /* TestCollectionViewController.swift */,
+				F0C983B41B95E3B500EF764F /* PostsTableViewController.swift */,
 				C906FB6B1B91F1EA00AFCF21 /* TestCollectionViewController.xib */,
 				C98B97FD1B8ED4D900EE17D5 /* ArticleTableViewController.swift */,
 				C98B97FE1B8ED4D900EE17D5 /* ArticleTableViewController.xib */,
@@ -458,6 +473,7 @@
 				C9D98C2F1B8EE15700BE920F /* back3.jpg in Resources */,
 				C931FF7E1B8ECE0D00D9C950 /* LaunchScreen.xib in Resources */,
 				C9D98C021B8EE06B00BE920F /* loved.png in Resources */,
+				F0C983B91B95EA0000EF764F /* swift-json-master in Resources */,
 				C9D98C3A1B8EE15700BE920F /* back14.jpg in Resources */,
 				C9D98C081B8EE06B00BE920F /* man6.jpg in Resources */,
 				C9D98C381B8EE15700BE920F /* back12.jpg in Resources */,
@@ -551,12 +567,16 @@
 				C906FB6E1B91F1EA00AFCF21 /* TestCollectionViewController.swift in Sources */,
 				C98B97FF1B8ED4D900EE17D5 /* ArticleTableViewController.swift in Sources */,
 				C931FF761B8ECE0D00D9C950 /* HomeViewController.swift in Sources */,
+				F0C983B71B95E97000EF764F /* PostCellViewController.swift in Sources */,
 				C931FF741B8ECE0D00D9C950 /* Tsukutabi_iOS.xcdatamodeld in Sources */,
 				C95A13EB1B940B6F00A4D6C9 /* ContentViewController.swift in Sources */,
 				C98B97FB1B8ED3A400EE17D5 /* CAPSPageMenu.swift in Sources */,
 				C98B98031B8ED50600EE17D5 /* ArticleTableViewCell.swift in Sources */,
 				C931FF711B8ECE0D00D9C950 /* AppDelegate.swift in Sources */,
 				C906FB6C1B91F1EA00AFCF21 /* MoodCollectionViewCell.swift in Sources */,
+				F0C983B51B95E3B500EF764F /* PostsTableViewController.swift in Sources */,
+				F0C983BD1B95EB6D00EF764F /* WebViewController.swift in Sources */,
+				F0C983BB1B95EA1200EF764F /* json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
