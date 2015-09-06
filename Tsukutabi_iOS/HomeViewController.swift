@@ -14,13 +14,21 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
     let Aqua = UIColor(red: 0, green: 255, blue: 255, alpha: 1.0)
     let black = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
     
+    //サイトURL
+    let wiredURL = "http://wired.jp/rssfeeder/"
+    let shikiURL = "http://www.100shiki.com/feed"
+    let cinraURL = "http://www.cinra.net/rss-all.xml"
+    
+    // didSelectTableViewCell()メソッドによって受け渡されてきた記事を保持しておくための変数
+    var currentSelectedArticle: Article?
+    
     // ナビゲーションタブバーの実装
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         // MARK: - UI Setup
         
-        self.title = "TSUKUTABI"
+        self.navigationItem.title = "TSUKUTABI"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -35,32 +43,40 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
     // 記事テーブルの実装
     override func viewDidLoad() {
         // Initialize view controllers to display and place in array
+        
+        
         var controllerArray : [UIViewController] = []
         
         var controller1 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller1.title = "USA"
+        controller1.loadRSS(wiredURL)
         controllerArray.append(controller1)
         controller1.customDelegate = self
         
         var controller2 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller2.title = "JAPAN"
+        controller2.loadRSS(shikiURL)
         controllerArray.append(controller2)
         controller2.customDelegate = self
         
         var controller3 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller3.title = "FRANCE"
+        controller3.loadRSS(cinraURL)
         controllerArray.append(controller3)
         controller3.customDelegate = self
         
         var controller4 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller4.title = "THAILAND"
+        controller4.loadRSS(shikiURL)
         controllerArray.append(controller4)
         controller4.customDelegate = self
         
         var controller5 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller5.title = "GERMAN"
+        controller5.loadRSS(wiredURL)
         controllerArray.append(controller5)
         controller5.customDelegate = self
+        
         
         // Customize menu (Optional)
         var parameters: [CAPSPageMenuOption] = [
@@ -75,7 +91,7 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
         ]
         
         // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height - 44), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
         
@@ -97,9 +113,16 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
         }
     }
     
-    func disSelectTableViewCell() {
-        println("セルがタップ")
+    func didSelectTableViewCell(article: Article) {
+        println("セルがタップされました")
+        self.currentSelectedArticle = article
         self.performSegueWithIdentifier("ShowToContentViewController", sender: nil)
+    }
+    
+    // 画面遷移時に値を遷移先に渡す(各記事にあった記事ページの移動の条件づけを行う)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let contentViewController = segue.destinationViewController as! ContentViewController
+        contentViewController.article = self.currentSelectedArticle
     }
 
     override func didReceiveMemoryWarning() {

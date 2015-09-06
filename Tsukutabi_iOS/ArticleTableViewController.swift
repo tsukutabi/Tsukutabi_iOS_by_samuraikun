@@ -9,10 +9,11 @@
 import UIKit
 
 @objc protocol ArticleTableViewControllerDelegate {
-    func disSelectTableViewCell()
+    func didSelectTableViewCell(article: Article)
+    
 }
 
-class ArticleTableViewController: UITableViewController {
+class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
     
     weak var customDelegate: ArticleTableViewControllerDelegate?
     
@@ -24,10 +25,24 @@ class ArticleTableViewController: UITableViewController {
                                       "back6.jpg", "back7.jpg", "back8.jpg", "back9.jpg", "back10.jpg",
                                       "back11.jpg", "back12.jpg", "back13.jpg"]
     
+    //サイトURL
+    let wiredURL = "http://wired.jp/rssfeeder/"
+    let shikiURL =  "http://www.100shiki.com/feed"
+    let cinraURL =   "http://www.cinra.net/rss-all.xml"
+    var isInLoad = false
+    let urlString = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://rss.dailynews.yahoo.co.jp/fc/computer/rss.xml&num=10"
+    
+    
+    var elementName = ""
+    // 複数の記事を保存するための配列
+    var articles:Array<Article> = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.registerNib(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleTableViewCell")
+        
     }
     
     
@@ -40,33 +55,112 @@ class ArticleTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 13
+        
+        // 記事の数だけセルを生成
+        return self.articles.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : ArticleTableViewCell = tableView.dequeueReusableCellWithIdentifier("ArticleTableViewCell") as! ArticleTableViewCell
         
         // Configure the cell...
-        cell.titleLabel.text = titlesArray[indexPath.row]
-        cell.photoImageView.image = UIImage(named: photoNameArray[indexPath.row])
+        //cell.titleLabel.text = titlesArray[indexPath.row]
+        cell.photoImageView.image = UIImage(named: photoNameArray[indexPath.row])   // <-- RSSの記事の数とダミー写真の数が違うためエラーが起こる
         cell.backImageView.image = UIImage(named: backgroundArray[indexPath.row])
-        
+        let article = self.articles[indexPath.row]
+        cell.titleLabel.text = article.title
+        cell.date.text = conversionDateFormat(article.date)
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250.0
+        return 200.0
     }
     
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.customDelegate?.disSelectTableViewCell()
+        var article = articles[indexPath.row]
+        self.customDelegate?.didSelectTableViewCell(article)
     }
+    
+    
+// ------------XMLの処理-----------------------------------//
+    
+    //URLのデータから、リクエストを送ることができるデータに変換
+    func loadRSS(siteURL: String) {
+        if let url = NSURL(string: siteURL) {
+            let request = NSURLRequest(URL: url)
+            let session = NSURLSession.sharedSession()
+            let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+                // 取得したdataを使って行いたい処理を記述
+                let parser = NSXMLParser(data: data)
+                parser.delegate = self
+                parser.parse()
+            })
+            task.resume()
+        }
+    }
+    
+    //loadRSSメソッドで、取得したXMLタグが、読み込まれたタイミングで呼ばれるデリゲートメソッド
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+        self.elementName = elementName
+        if self.elementName == "item" {
+            let article = Article()
+            self.articles.append(article)
+        }
+    }
+    
+    //解析がスタートしてタグ以外のテキストを読み込んだタイミングで呼ばれるデリゲートメソッド
+    func parser(parser: NSXMLParser, foundCharacters string: String?) {
+        var lastArticle = self.articles.last
+        if self.elementName == "title" {
+            lastArticle?.title += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        } else if self.elementName == "user_icon" {
+            lastArticle?.user_icon += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        } else if self.elementName == "pubDate" {
+            lastArticle?.date += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        } else if self.elementName == "link" {
+            lastArticle?.link += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        }
+    }
+    
+    // 解析が終了したタイミングで呼ばれるデリゲートメソッド
+    func parserDidEndDocument(parser: NSXMLParser) {
+        
+        // このメソッドを使用することでメインキューにアクセスすることが可能
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.reloadData()     // <----  TableViewというUI部品の更新はメインキューでしか行えない
+        })
+    }
+    
+// -------------JSONの処理・取得 -------------------------------------//
+//    func loadJSON() {
+//        self.isInLoad = true
+//        var url = NSURL(string: self.urlString)!
+//        var task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+//            //リソースの処理が終わると、ここに書いた処理が実行される
+//            var json = JSON(data: data)
+//            
+//            //各セルに情報を突っ込む
+//            
+//        })
+//    }
+    
+    func conversionDateFormat(dateString: String) -> String {
+        let inputFormatter = NSDateFormatter()
+        inputFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
+        let date: NSDate! = inputFormatter.dateFromString(dateString)
+        
+        let outputFormatter = NSDateFormatter()
+        outputFormatter.dateFormat = "yyy/MM/dd HH:mm"
+        let outputDateString = outputFormatter.stringFromDate(date)
+        return outputDateString
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+        
 }
