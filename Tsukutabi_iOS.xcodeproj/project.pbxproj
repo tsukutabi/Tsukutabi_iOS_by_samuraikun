@@ -25,6 +25,10 @@
 		C98B98001B8ED4D900EE17D5 /* ArticleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B97FE1B8ED4D900EE17D5 /* ArticleTableViewController.xib */; };
 		C98B98031B8ED50600EE17D5 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B98011B8ED50600EE17D5 /* ArticleTableViewCell.swift */; };
 		C98B98041B8ED50600EE17D5 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98B98021B8ED50600EE17D5 /* ArticleTableViewCell.xib */; };
+		C99B83901BAAD9BF00EE0104 /* pulltorefresharrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C99B838C1BAAD9BF00EE0104 /* pulltorefresharrow.png */; };
+		C99B83911BAAD9BF00EE0104 /* PullToRefreshOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B838D1BAAD9BF00EE0104 /* PullToRefreshOption.swift */; };
+		C99B83921BAAD9BF00EE0104 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B838E1BAAD9BF00EE0104 /* PullToRefreshView.swift */; };
+		C99B83931BAAD9BF00EE0104 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B838F1BAAD9BF00EE0104 /* UIScrollViewExtension.swift */; };
 		C9D8610F1B9C080E00CFAFE6 /* 100shiki_top_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D861061B9C080E00CFAFE6 /* 100shiki_top_image.png */; };
 		C9D861101B9C080E00CFAFE6 /* bookmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D861071B9C080E00CFAFE6 /* bookmark_icon.png */; };
 		C9D861111B9C080E00CFAFE6 /* cinra_top_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D861081B9C080E00CFAFE6 /* cinra_top_image.png */; };
@@ -132,6 +136,10 @@
 		C98B97FE1B8ED4D900EE17D5 /* ArticleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTableViewController.xib; sourceTree = "<group>"; };
 		C98B98011B8ED50600EE17D5 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		C98B98021B8ED50600EE17D5 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		C99B838C1BAAD9BF00EE0104 /* pulltorefresharrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulltorefresharrow.png; sourceTree = "<group>"; };
+		C99B838D1BAAD9BF00EE0104 /* PullToRefreshOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshOption.swift; sourceTree = "<group>"; };
+		C99B838E1BAAD9BF00EE0104 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
+		C99B838F1BAAD9BF00EE0104 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		C9D861061B9C080E00CFAFE6 /* 100shiki_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100shiki_top_image.png; sourceTree = "<group>"; };
 		C9D861071B9C080E00CFAFE6 /* bookmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark_icon.png; sourceTree = "<group>"; };
 		C9D861081B9C080E00CFAFE6 /* cinra_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinra_top_image.png; sourceTree = "<group>"; };
@@ -296,6 +304,7 @@
 		C931FF6D1B8ECE0D00D9C950 /* Tsukutabi_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C99B838B1BAAD9BF00EE0104 /* PulltoRefresh */,
 				C9137B271B9B16E200AB88EC /* Model */,
 				C9137B231B9B0E0E00AB88EC /* json.swift */,
 				C98B97FC1B8ED3E000EE17D5 /* CAPSPageMenu */,
@@ -343,6 +352,18 @@
 				C98B97FA1B8ED3A400EE17D5 /* CAPSPageMenu.swift */,
 			);
 			name = CAPSPageMenu;
+			sourceTree = "<group>";
+		};
+		C99B838B1BAAD9BF00EE0104 /* PulltoRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C99B838C1BAAD9BF00EE0104 /* pulltorefresharrow.png */,
+				C99B838D1BAAD9BF00EE0104 /* PullToRefreshOption.swift */,
+				C99B838E1BAAD9BF00EE0104 /* PullToRefreshView.swift */,
+				C99B838F1BAAD9BF00EE0104 /* UIScrollViewExtension.swift */,
+			);
+			name = PulltoRefresh;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		C9D861051B9C080E00CFAFE6 /* RSS_images */ = {
@@ -539,6 +560,7 @@
 				C9D861151B9C080E00CFAFE6 /* safari_icon.png in Resources */,
 				C9D98C3C1B8EE15700BE920F /* tumblr_mttipfTc461rn5ovao2_1280.jpg in Resources */,
 				C9D98C141B8EE06B00BE920F /* relax.png in Resources */,
+				C99B83901BAAD9BF00EE0104 /* pulltorefresharrow.png in Resources */,
 				C9D98C321B8EE15700BE920F /* back6.jpg in Resources */,
 				C9D98C151B8EE06B00BE920F /* wealthy.png in Resources */,
 				C9D98C3B1B8EE15700BE920F /* back15.jpg in Resources */,
@@ -650,6 +672,7 @@
 			files = (
 				C9137B261B9B16C700AB88EC /* Article.swift in Sources */,
 				C98B97FF1B8ED4D900EE17D5 /* ArticleTableViewController.swift in Sources */,
+				C99B83911BAAD9BF00EE0104 /* PullToRefreshOption.swift in Sources */,
 				C9D8611F1B9C12E400CFAFE6 /* TabBarViewController.swift in Sources */,
 				C931FF761B8ECE0D00D9C950 /* HomeViewController.swift in Sources */,
 				C931FF741B8ECE0D00D9C950 /* Tsukutabi_iOS.xcdatamodeld in Sources */,
@@ -658,9 +681,11 @@
 				C98B98031B8ED50600EE17D5 /* ArticleTableViewCell.swift in Sources */,
 				C9D861311B9C367600CFAFE6 /* MyFavoriteTableViewController.swift in Sources */,
 				C9137B241B9B0E0E00AB88EC /* json.swift in Sources */,
+				C99B83931BAAD9BF00EE0104 /* UIScrollViewExtension.swift in Sources */,
 				C931FF711B8ECE0D00D9C950 /* AppDelegate.swift in Sources */,
 				C906FB6C1B91F1EA00AFCF21 /* MoodCollectionViewCell.swift in Sources */,
 				C9D861331B9C3DAD00CFAFE6 /* ArticleStocks.swift in Sources */,
+				C99B83921BAAD9BF00EE0104 /* PullToRefreshView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

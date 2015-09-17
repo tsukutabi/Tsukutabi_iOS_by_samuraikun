@@ -43,6 +43,12 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
         
         self.tableView.registerNib(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleTableViewCell")
         
+        self.tableView.addPullToRefresh({ [weak self] in
+            // refresh code
+            
+            self?.tableView.reloadData()
+            self?.tableView.stopPullToRefresh()
+        })
     }
     
     
