@@ -32,7 +32,6 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
     var isInLoad = false
     let urlString = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://rss.dailynews.yahoo.co.jp/fc/computer/rss.xml&num=10"
     
-    
     var elementName = ""
     // 複数の記事を保存するための配列
     var articles:Array<Article> = []
@@ -149,7 +148,9 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
 //            var json = JSON(data: data)
 //            
 //            //各セルに情報を突っ込む
-//            
+//            for var i = 0; i < self.articles.count; i++ {
+//                var entries = json["responseData"]["feed"]["entries"][i]
+//            }
 //        })
 //    }
     

@@ -9,9 +9,26 @@
 import UIKit
 
 class MyFavoriteTableViewController: UITableViewController {
-
+    
+    let sectionNum = 1
+    let cellNum = 10
+    //let urlString = "http://api.openweathermap.org/data/2.5/forecast?units=metric&q=Tokyo"
+    let urlString = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://rss.dailynews.yahoo.co.jp/fc/computer/rss.xml&num=10"
+    let realvoice = "http://realvoicenext.sakura.ne.jp/cakephp/posts/indexjson"
+    
+    // セルの中身
+    var cellItems = NSMutableArray()
+    // ロード中かどうか
+    var isInLoad = false
+    // 選択されたセルの列番号
+    var selectedRow: Int?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // json取得->tableに突っ込む
+        makeTableData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,6 +37,34 @@ class MyFavoriteTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.tableView.registerNib(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleTableViewCell")
+    }
+    
+    func makeTableData() {
+        self.isInLoad = true
+        var url = NSURL(string: self.urlString)!
+        var task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {data, response, error in
+            // リソースの取得が終わると、ここに書いた処理が実行される
+            var json = JSON(data: data)
+            // 各セルに情報を突っ込む
+            for var i = 0; i < self.cellNum; i++ {
+                var day = json["responseData"]["feed"]["entries"][i]["publishedDate"]
+                var title = json["responseData"]["feed"]["entries"][i]["title"]
+                var info = "\(title), \(day)"
+                self.cellItems[i] = info
+            }
+            // ロードが完了したので、falseに
+            self.isInLoad = false
+        })
+        task.resume()
+        
+        // 読み込みが終わるまで待機
+        // (ゆる募)
+        // 下の解決策以外に何か方法があればと。。。
+        // jsonの取得に非同期通信を使ってるので、読み込むまで待ってからじゃないと
+        // cellに値が入らない。同期通信使えって話もあるけど今後の拡張を考えてNSURLSession使ってます(^_^;)
+        while isInLoad {
+            usleep(10)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,18 +77,19 @@ class MyFavoriteTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return self.sectionNum
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 10
+        return self.cellNum
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ArticleTableViewCell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel?.text = self.cellItems[indexPath.row] as? String
         return cell
     }
     

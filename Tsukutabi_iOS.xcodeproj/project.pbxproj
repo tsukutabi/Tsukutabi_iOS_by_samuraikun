@@ -10,7 +10,6 @@
 		79479A2704C2902DB8F840A2 /* Pods_Tsukutabi_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916DB97097C6271999FE36D7 /* Pods_Tsukutabi_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C906FB6C1B91F1EA00AFCF21 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906FB681B91F1EA00AFCF21 /* MoodCollectionViewCell.swift */; };
 		C906FB6D1B91F1EA00AFCF21 /* MoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C906FB691B91F1EA00AFCF21 /* MoodCollectionViewCell.xib */; };
-		C9137B241B9B0E0E00AB88EC /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9137B231B9B0E0E00AB88EC /* json.swift */; };
 		C9137B261B9B16C700AB88EC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9137B251B9B16C700AB88EC /* Article.swift */; };
 		C931FF711B8ECE0D00D9C950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931FF701B8ECE0D00D9C950 /* AppDelegate.swift */; };
 		C931FF741B8ECE0D00D9C950 /* Tsukutabi_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C931FF721B8ECE0D00D9C950 /* Tsukutabi_iOS.xcdatamodeld */; };
@@ -29,6 +28,8 @@
 		C99B83911BAAD9BF00EE0104 /* PullToRefreshOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B838D1BAAD9BF00EE0104 /* PullToRefreshOption.swift */; };
 		C99B83921BAAD9BF00EE0104 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B838E1BAAD9BF00EE0104 /* PullToRefreshView.swift */; };
 		C99B83931BAAD9BF00EE0104 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B838F1BAAD9BF00EE0104 /* UIScrollViewExtension.swift */; };
+		C9A287391BB3D32B0000BC70 /* ParseFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A287381BB3D32B0000BC70 /* ParseFeed.swift */; };
+		C9A2873B1BB3D75D0000BC70 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2873A1BB3D75D0000BC70 /* json.swift */; };
 		C9D8610F1B9C080E00CFAFE6 /* 100shiki_top_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D861061B9C080E00CFAFE6 /* 100shiki_top_image.png */; };
 		C9D861101B9C080E00CFAFE6 /* bookmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D861071B9C080E00CFAFE6 /* bookmark_icon.png */; };
 		C9D861111B9C080E00CFAFE6 /* cinra_top_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D861081B9C080E00CFAFE6 /* cinra_top_image.png */; };
@@ -117,7 +118,6 @@
 		935506104F84D2147B95E2CE /* Pods-Tsukutabi_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tsukutabi_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tsukutabi_iOS/Pods-Tsukutabi_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C906FB681B91F1EA00AFCF21 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		C906FB691B91F1EA00AFCF21 /* MoodCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoodCollectionViewCell.xib; sourceTree = "<group>"; };
-		C9137B231B9B0E0E00AB88EC /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		C9137B251B9B16C700AB88EC /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		C931FF6B1B8ECE0D00D9C950 /* Tsukutabi_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tsukutabi_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C931FF6F1B8ECE0D00D9C950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +141,8 @@
 		C99B838D1BAAD9BF00EE0104 /* PullToRefreshOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshOption.swift; sourceTree = "<group>"; };
 		C99B838E1BAAD9BF00EE0104 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 		C99B838F1BAAD9BF00EE0104 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		C9A287381BB3D32B0000BC70 /* ParseFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseFeed.swift; sourceTree = "<group>"; };
+		C9A2873A1BB3D75D0000BC70 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		C9D861061B9C080E00CFAFE6 /* 100shiki_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100shiki_top_image.png; sourceTree = "<group>"; };
 		C9D861071B9C080E00CFAFE6 /* bookmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark_icon.png; sourceTree = "<group>"; };
 		C9D861081B9C080E00CFAFE6 /* cinra_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinra_top_image.png; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				C95A13EA1B940B6F00A4D6C9 /* ContentViewController.swift */,
 				C9D8611E1B9C12E400CFAFE6 /* TabBarViewController.swift */,
 				C9D861301B9C367600CFAFE6 /* MyFavoriteTableViewController.swift */,
+				C9A287381BB3D32B0000BC70 /* ParseFeed.swift */,
 			);
 			name = View_Controllers;
 			sourceTree = "<group>";
@@ -305,9 +308,9 @@
 		C931FF6D1B8ECE0D00D9C950 /* Tsukutabi_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C9A2873A1BB3D75D0000BC70 /* json.swift */,
 				C99B838B1BAAD9BF00EE0104 /* PulltoRefresh */,
 				C9137B271B9B16E200AB88EC /* Model */,
-				C9137B231B9B0E0E00AB88EC /* json.swift */,
 				C98B97FC1B8ED3E000EE17D5 /* CAPSPageMenu */,
 				C931FF701B8ECE0D00D9C950 /* AppDelegate.swift */,
 				C931FF771B8ECE0D00D9C950 /* Main.storyboard */,
@@ -682,8 +685,9 @@
 				C98B97FB1B8ED3A400EE17D5 /* CAPSPageMenu.swift in Sources */,
 				C98B98031B8ED50600EE17D5 /* ArticleTableViewCell.swift in Sources */,
 				C9D861311B9C367600CFAFE6 /* MyFavoriteTableViewController.swift in Sources */,
-				C9137B241B9B0E0E00AB88EC /* json.swift in Sources */,
+				C9A287391BB3D32B0000BC70 /* ParseFeed.swift in Sources */,
 				C99B83931BAAD9BF00EE0104 /* UIScrollViewExtension.swift in Sources */,
+				C9A2873B1BB3D75D0000BC70 /* json.swift in Sources */,
 				C931FF711B8ECE0D00D9C950 /* AppDelegate.swift in Sources */,
 				C906FB6C1B91F1EA00AFCF21 /* MoodCollectionViewCell.swift in Sources */,
 				C9D861331B9C3DAD00CFAFE6 /* ArticleStocks.swift in Sources */,
