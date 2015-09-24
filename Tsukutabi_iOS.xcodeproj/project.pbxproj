@@ -130,6 +130,7 @@
 		C931FF831B8ECE0D00D9C950 /* Tsukutabi_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tsukutabi_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C931FF881B8ECE0D00D9C950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C931FF891B8ECE0D00D9C950 /* Tsukutabi_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tsukutabi_iOSTests.swift; sourceTree = "<group>"; };
+		C93924D01BB3CFD500661D5B /* Tsukutabi_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tsukutabi_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		C95A13EA1B940B6F00A4D6C9 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		C98B97FA1B8ED3A400EE17D5 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		C98B97FD1B8ED4D900EE17D5 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +318,7 @@
 				C931FF721B8ECE0D00D9C950 /* Tsukutabi_iOS.xcdatamodeld */,
 				C9D98BE01B8EE00500BE920F /* Images */,
 				C931FF6E1B8ECE0D00D9C950 /* Supporting Files */,
+				C93924D01BB3CFD500661D5B /* Tsukutabi_iOS-Bridging-Header.h */,
 			);
 			path = Tsukutabi_iOS;
 			sourceTree = "<group>";
@@ -768,6 +770,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -804,6 +807,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -813,9 +817,13 @@
 			baseConfigurationReference = 935506104F84D2147B95E2CE /* Pods-Tsukutabi_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tsukutabi_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tsukutabi_iOS/Tsukutabi_iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -824,9 +832,12 @@
 			baseConfigurationReference = 1FAFCA097F11AE05E613E9C1 /* Pods-Tsukutabi_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tsukutabi_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tsukutabi_iOS/Tsukutabi_iOS-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};
