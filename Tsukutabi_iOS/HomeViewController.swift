@@ -47,31 +47,31 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
         
         var controllerArray : [UIViewController] = []
         
-        var controller1 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
+        let controller1 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller1.title = "USA"
         controller1.loadRSS(wiredURL)
         controllerArray.append(controller1)
         controller1.customDelegate = self
         
-        var controller2 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
+        let controller2 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller2.title = "JAPAN"
         controller2.loadRSS(shikiURL)
         controllerArray.append(controller2)
         controller2.customDelegate = self
         
-        var controller3 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
+        let controller3 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller3.title = "FRANCE"
         controller3.loadRSS(cinraURL)
         controllerArray.append(controller3)
         controller3.customDelegate = self
         
-        var controller4 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
+        let controller4 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller4.title = "THAILAND"
         controller4.loadRSS(shikiURL)
         controllerArray.append(controller4)
         controller4.customDelegate = self
         
-        var controller5 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
+        let controller5 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller5.title = "GERMAN"
         controller5.loadRSS(wiredURL)
         controllerArray.append(controller5)
@@ -79,7 +79,7 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
         
         
         // Customize menu (Optional)
-        var parameters: [CAPSPageMenuOption] = [
+        let parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(black),
             .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
             .SelectionIndicatorColor(UIColor.orangeColor()),
@@ -98,7 +98,7 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
     }
     
     func didTapGoToLeft() {
-        var currentIndex = pageMenu!.currentPageIndex
+        let currentIndex = pageMenu!.currentPageIndex
         
         if currentIndex > 0 {
             pageMenu!.moveToPage(currentIndex - 1)
@@ -106,7 +106,7 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
     }
     
     func didTapGoToRight() {
-        var currentIndex = pageMenu!.currentPageIndex
+        let currentIndex = pageMenu!.currentPageIndex
         
         if currentIndex < pageMenu!.controllerArray.count {
             pageMenu!.moveToPage(currentIndex + 1)
@@ -114,7 +114,7 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
     }
     
     func didSelectTableViewCell(article: Article) {
-        println("セルがタップされました")
+        print("セルがタップされました")
         self.currentSelectedArticle = article
         self.performSegueWithIdentifier("ShowToContentViewController", sender: nil)
     }

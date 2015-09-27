@@ -26,12 +26,12 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
                                       "back11.jpg", "back12.jpg", "back13.jpg"]
     
     //サイトURL
-    let wiredURL = "http://wired.jp/rssfeeder/"
-    let shikiURL =  "http://www.100shiki.com/feed"
-    let cinraURL =   "http://www.cinra.net/rss-all.xml"
-    var isInLoad = false
-    let urlString = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://rss.dailynews.yahoo.co.jp/fc/computer/rss.xml&num=10"
-    
+//    let wiredURL = "http://wired.jp/rssfeeder/"
+//    let shikiURL =  "http://www.100shiki.com/feed"
+//    let cinraURL =   "http://www.cinra.net/rss-all.xml"
+//    var isInLoad = false
+//    let urlString = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://rss.dailynews.yahoo.co.jp/fc/computer/rss.xml&num=10"
+//    
     var elementName = ""
     // 複数の記事を保存するための配列
     var articles:Array<Article> = []
@@ -85,7 +85,7 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var article = articles[indexPath.row]
+        let article = articles[indexPath.row]
         self.customDelegate?.didSelectTableViewCell(article)
     }
     
@@ -99,7 +99,7 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
             let session = NSURLSession.sharedSession()
             let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
                 // 取得したdataを使って行いたい処理を記述
-                let parser = NSXMLParser(data: data)
+                let parser = NSXMLParser(data: data!)
                 parser.delegate = self
                 parser.parse()
             })
@@ -108,7 +108,7 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
     }
     
     //loadRSSメソッドで、取得したXMLタグが、読み込まれたタイミングで呼ばれるデリゲートメソッド
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         self.elementName = elementName
         if self.elementName == "item" {
             let article = Article()
@@ -117,16 +117,16 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
     }
     
     //解析がスタートしてタグ以外のテキストを読み込んだタイミングで呼ばれるデリゲートメソッド
-    func parser(parser: NSXMLParser, foundCharacters string: String?) {
-        var lastArticle = self.articles.last
+    func parser(parser: NSXMLParser, foundCharacters string: String) {
+        let lastArticle = self.articles.last
         if self.elementName == "title" {
-            lastArticle?.title += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            lastArticle?.title += string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         } else if self.elementName == "user_icon" {
-            lastArticle?.user_icon += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            lastArticle?.user_icon += string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         } else if self.elementName == "pubDate" {
-            lastArticle?.date += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            lastArticle?.date += string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         } else if self.elementName == "link" {
-            lastArticle?.link += string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            lastArticle?.link += string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         }
     }
     

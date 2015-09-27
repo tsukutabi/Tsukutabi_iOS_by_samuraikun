@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         
         //指定する色を定義
-        let blue = UIColor(red: 11.0 / 255, green: 78.0 / 255, blue: 160.0 / 255, alpha: 1.0)
+        _ = UIColor(red: 11.0 / 255, green: 78.0 / 255, blue: 160.0 / 255, alpha: 1.0)
         let black = UIColor(red: 48.0 / 255, green: 48.0 / 255, blue: 47.0 / 255, alpha: 1.0)
         let white = UIColor.whiteColor()
         
@@ -36,10 +36,10 @@ class TabBarViewController: UITabBarController {
         //UITabBar.appearance().translucent = false // <--曇りガラス効果をOFFにするためArticleViewの高さが変わる
         
         //TabBarControllerと紐付いているView Controllerを取得
-        let firstViewController = self.viewControllers![0] as! UIViewController
-        let secondViewController = self.viewControllers![1] as! UIViewController
-        let thirdViewController = self.viewControllers![2] as! UIViewController
-        let fourthViewController = self.viewControllers![3] as! UIViewController
+        let firstViewController = self.viewControllers![0] 
+        let secondViewController = self.viewControllers![1] 
+        let thirdViewController = self.viewControllers![2] 
+        let fourthViewController = self.viewControllers![3] 
         
         //それぞれのView ControllerのTab Bar Itemに用意した画像を設定
         firstViewController.tabBarItem = UITabBarItem(title: "Home", image: homeImage, selectedImage: home_selectImage)

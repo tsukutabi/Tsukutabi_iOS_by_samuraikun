@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PageMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Tsukutabi_iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5F56BDE7A5ED98E404AA7D4CAA85C0D6</key>
+		<key>2072E5F48F215F047EC0C7C4A43FF026</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A225B7B0835D1E7515D999D0DA5729A</key>
+		<key>2D5C0D32E7BF0206A277CD23FB8FE2D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77F7FD41CB840C24DF4F57060C4E8F80</key>
+		<key>435355C0011CABA8B777172619B5E0F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88FE8C90EA4BEF88A8785901ECC029C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A61D13E3D2936485039F5148FCAECF90</key>
+		<key>D31D9942454F930E750466F305C92805</key>
 		<dict>
 			<key>primary</key>
 			<true/>

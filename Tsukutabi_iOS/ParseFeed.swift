@@ -6,7 +6,3 @@
 //  Copyright (c) 2015年 Black/Jack. All rights reserved.
 //
 
-import UIKit
-import Alamofire
-import HTMLReader
-

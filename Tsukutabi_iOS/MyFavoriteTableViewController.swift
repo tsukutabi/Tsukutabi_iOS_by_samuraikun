@@ -44,7 +44,7 @@ class MyFavoriteTableViewController: UITableViewController {
         var url = NSURL(string: self.urlString)!
         var task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {data, response, error in
             // リソースの取得が終わると、ここに書いた処理が実行される
-            var json = JSON(data: data)
+            var json = JSON(data: data!)
             // 各セルに情報を突っ込む
             for var i = 0; i < self.cellNum; i++ {
                 var day = json["responseData"]["feed"]["entries"][i]["publishedDate"]
@@ -88,7 +88,7 @@ class MyFavoriteTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ArticleTableViewCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ArticleTableViewCell", forIndexPath: indexPath) 
         cell.textLabel?.text = self.cellItems[indexPath.row] as? String
         return cell
     }

@@ -22,10 +22,10 @@ class ContentViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(self.article.title)
+        print(self.article.title)
         
-        var URL = NSURL(string: self.article.link)
-        var URLReq = NSURLRequest(URL: URL!)
+        let URL = NSURL(string: self.article.link)
+        let URLReq = NSURLRequest(URL: URL!)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "showActionMenu")
         self.wkWebView.navigationDelegate = self
@@ -76,7 +76,7 @@ class ContentViewController: UIViewController, WKNavigationDelegate {
     }
     
     func setShareBtn(x: CGFloat, tag: Int, imageName: String){
-        var shareBtn = UIButton()
+        let shareBtn = UIButton()
         shareBtn.frame.size = CGSizeMake(60, 60)
         shareBtn.center = CGPointMake(x, 50)
         shareBtn.setBackgroundImage(UIImage(named: imageName), forState: UIControlState.Normal)
@@ -89,13 +89,13 @@ class ContentViewController: UIViewController, WKNavigationDelegate {
     func tapSharebtn(sender: UIButton) {
         if sender.tag == 1 {
             //Facebookに記事をシェア
-            var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            let facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             facebookVC.setInitialText(wkWebView.title)
             facebookVC.addURL(wkWebView.URL)
             presentViewController(facebookVC, animated: true, completion: nil)
         } else if sender.tag == 2 {
             //Twitterに記事をシェア
-            var twitterVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let twitterVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             twitterVC.setInitialText(wkWebView.title)
             twitterVC.addURL(wkWebView.URL)
             presentViewController(twitterVC, animated: true, completion: nil)
@@ -105,7 +105,7 @@ class ContentViewController: UIViewController, WKNavigationDelegate {
         } else if sender.tag == 4 {
             //ブックマークに追加
             self.articleStocks.addArticleStocks(self.article)
-            println(self.articleStocks.myArticles)
+            print(self.articleStocks.myArticles)
         }
     }
     

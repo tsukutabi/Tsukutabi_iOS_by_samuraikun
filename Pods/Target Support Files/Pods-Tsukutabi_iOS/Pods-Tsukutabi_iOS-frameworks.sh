@@ -84,12 +84,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Tsukutabi_iOS/Alamofire.framework"
   install_framework "Pods-Tsukutabi_iOS/HTMLReader.framework"
-  install_framework "Pods-Tsukutabi_iOS/PageMenu.framework"
   install_framework "Pods-Tsukutabi_iOS/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Tsukutabi_iOS/Alamofire.framework"
   install_framework "Pods-Tsukutabi_iOS/HTMLReader.framework"
-  install_framework "Pods-Tsukutabi_iOS/PageMenu.framework"
   install_framework "Pods-Tsukutabi_iOS/SVProgressHUD.framework"
 fi
