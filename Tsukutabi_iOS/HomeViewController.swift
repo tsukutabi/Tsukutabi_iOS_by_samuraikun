@@ -25,6 +25,7 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
     // ナビゲーションタブバーの実装
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+       
         
         // MARK: - UI Setup
         
@@ -44,7 +45,6 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
     override func viewDidLoad() {
         // Initialize view controllers to display and place in array
         
-        
         var controllerArray : [UIViewController] = []
         
         let controller1 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
@@ -61,7 +61,7 @@ class HomeViewController: UIViewController, ArticleTableViewControllerDelegate {
         
         let controller3 : ArticleTableViewController = ArticleTableViewController(nibName: "ArticleTableViewController", bundle: nil)
         controller3.title = "FRANCE"
-        controller3.loadRSS(cinraURL)
+        controller3.loadRSS(wiredURL)
         controllerArray.append(controller3)
         controller3.customDelegate = self
         

@@ -41,15 +41,15 @@ class MyFavoriteTableViewController: UITableViewController {
     
     func makeTableData() {
         self.isInLoad = true
-        var url = NSURL(string: self.urlString)!
-        var task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {data, response, error in
+        let url = NSURL(string: self.urlString)!
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: {data, response, error in
             // リソースの取得が終わると、ここに書いた処理が実行される
-            var json = JSON(data: data!)
+            let json = JSON(data: data!)
             // 各セルに情報を突っ込む
             for var i = 0; i < self.cellNum; i++ {
-                var day = json["responseData"]["feed"]["entries"][i]["publishedDate"]
-                var title = json["responseData"]["feed"]["entries"][i]["title"]
-                var info = "\(title), \(day)"
+                let day = json["responseData"]["feed"]["entries"][i]["publishedDate"]
+                let title = json["responseData"]["feed"]["entries"][i]["title"]
+                let info = "\(title), \(day)"
                 self.cellItems[i] = info
             }
             // ロードが完了したので、falseに

@@ -39,7 +39,6 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //SVProgressHUD.show()
         
         self.tableView.registerNib(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleTableViewCell")
         
@@ -80,7 +79,7 @@ class ArticleTableViewController: UITableViewController, NSXMLParserDelegate {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 200.0
+        return 250.0
     }
     
     

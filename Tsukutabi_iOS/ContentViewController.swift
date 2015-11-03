@@ -37,10 +37,12 @@ class ContentViewController: UIViewController, WKNavigationDelegate {
     
     func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         self.navigationItem.title = "Loading..."
+        SVProgressHUD.show()
     }
     
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         self.navigationItem.title = wkWebView.title
+        SVProgressHUD.dismiss()
     }
     
 // ---------アクションボタン追加(facebook,Twitterのシェアボタンなど)---------//

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79479A2704C2902DB8F840A2 /* Pods_Tsukutabi_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916DB97097C6271999FE36D7 /* Pods_Tsukutabi_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		79479A2704C2902DB8F840A2 /* Pods_Tsukutabi_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916DB97097C6271999FE36D7 /* Pods_Tsukutabi_iOS.framework */; };
 		C906FB6C1B91F1EA00AFCF21 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906FB681B91F1EA00AFCF21 /* MoodCollectionViewCell.swift */; };
 		C906FB6D1B91F1EA00AFCF21 /* MoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C906FB691B91F1EA00AFCF21 /* MoodCollectionViewCell.xib */; };
 		C9137B261B9B16C700AB88EC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9137B251B9B16C700AB88EC /* Article.swift */; };
@@ -142,15 +142,15 @@
 		C99B838E1BAAD9BF00EE0104 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 		C99B838F1BAAD9BF00EE0104 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		C9A287381BB3D32B0000BC70 /* ParseFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseFeed.swift; sourceTree = "<group>"; };
-		C9D861061B9C080E00CFAFE6 /* 100shiki_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100shiki_top_image.png; sourceTree = "<group>"; };
-		C9D861071B9C080E00CFAFE6 /* bookmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark_icon.png; sourceTree = "<group>"; };
-		C9D861081B9C080E00CFAFE6 /* cinra_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinra_top_image.png; sourceTree = "<group>"; };
-		C9D861091B9C080E00CFAFE6 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
-		C9D8610A1B9C080E00CFAFE6 /* facebook_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_icon.png; sourceTree = "<group>"; };
-		C9D8610B1B9C080E00CFAFE6 /* pug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pug.png; sourceTree = "<group>"; };
-		C9D8610C1B9C080E00CFAFE6 /* safari_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = safari_icon.png; sourceTree = "<group>"; };
-		C9D8610D1B9C080E00CFAFE6 /* twitter_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_icon.png; sourceTree = "<group>"; };
-		C9D8610E1B9C080E00CFAFE6 /* wired_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wired_top_image.png; sourceTree = "<group>"; };
+		C9D861061B9C080E00CFAFE6 /* 100shiki_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 100shiki_top_image.png; path = RSS_images/100shiki_top_image.png; sourceTree = "<group>"; };
+		C9D861071B9C080E00CFAFE6 /* bookmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmark_icon.png; path = RSS_images/bookmark_icon.png; sourceTree = "<group>"; };
+		C9D861081B9C080E00CFAFE6 /* cinra_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cinra_top_image.png; path = RSS_images/cinra_top_image.png; sourceTree = "<group>"; };
+		C9D861091B9C080E00CFAFE6 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = RSS_images/cover.png; sourceTree = "<group>"; };
+		C9D8610A1B9C080E00CFAFE6 /* facebook_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook_icon.png; path = RSS_images/facebook_icon.png; sourceTree = "<group>"; };
+		C9D8610B1B9C080E00CFAFE6 /* pug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pug.png; path = RSS_images/pug.png; sourceTree = "<group>"; };
+		C9D8610C1B9C080E00CFAFE6 /* safari_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = safari_icon.png; path = RSS_images/safari_icon.png; sourceTree = "<group>"; };
+		C9D8610D1B9C080E00CFAFE6 /* twitter_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter_icon.png; path = RSS_images/twitter_icon.png; sourceTree = "<group>"; };
+		C9D8610E1B9C080E00CFAFE6 /* wired_top_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wired_top_image.png; path = RSS_images/wired_top_image.png; sourceTree = "<group>"; };
 		C9D8611A1B9C104600CFAFE6 /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		C9D8611C1B9C10DB00CFAFE6 /* Like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Like.png; sourceTree = "<group>"; };
 		C9D8611E1B9C12E400CFAFE6 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -369,9 +369,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		C9D861051B9C080E00CFAFE6 /* RSS_images */ = {
+		C9D98BE01B8EE00500BE920F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C9D8612C1B9C2A0800CFAFE6 /* User_select.png */,
+				C9D8612D1B9C2A0800CFAFE6 /* User.png */,
+				C9D8612A1B9C297900CFAFE6 /* Like_select.png */,
+				C9D861281B9C28F000CFAFE6 /* Home_select.png */,
+				C9D861261B9C287200CFAFE6 /* Edit_select.png */,
 				C9D861061B9C080E00CFAFE6 /* 100shiki_top_image.png */,
 				C9D861071B9C080E00CFAFE6 /* bookmark_icon.png */,
 				C9D861081B9C080E00CFAFE6 /* cinra_top_image.png */,
@@ -381,24 +386,11 @@
 				C9D8610C1B9C080E00CFAFE6 /* safari_icon.png */,
 				C9D8610D1B9C080E00CFAFE6 /* twitter_icon.png */,
 				C9D8610E1B9C080E00CFAFE6 /* wired_top_image.png */,
-			);
-			path = RSS_images;
-			sourceTree = "<group>";
-		};
-		C9D98BE01B8EE00500BE920F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				C9D8612C1B9C2A0800CFAFE6 /* User_select.png */,
-				C9D8612D1B9C2A0800CFAFE6 /* User.png */,
-				C9D8612A1B9C297900CFAFE6 /* Like_select.png */,
-				C9D861281B9C28F000CFAFE6 /* Home_select.png */,
-				C9D861261B9C287200CFAFE6 /* Edit_select.png */,
 				C9D861241B9C19D200CFAFE6 /* Edit.png */,
 				C9D861221B9C195600CFAFE6 /* Confused.png */,
 				C9D861201B9C193E00CFAFE6 /* Search.png */,
 				C9D8611C1B9C10DB00CFAFE6 /* Like.png */,
 				C9D8611A1B9C104600CFAFE6 /* Home.png */,
-				C9D861051B9C080E00CFAFE6 /* RSS_images */,
 				C9D98C3F1B8EE2A000BE920F /* silicon_valley.jpg */,
 				C9D98C1B1B8EE15700BE920F /* back1.jpg */,
 				C9D98C1C1B8EE15700BE920F /* back2.jpg */,
@@ -523,6 +515,7 @@
 				TargetAttributes = {
 					C931FF6A1B8ECE0D00D9C950 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = XJLCA4PRC8;
 					};
 					C931FF821B8ECE0D00D9C950 = {
 						CreatedOnToolsVersion = 6.4;
@@ -788,7 +781,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -827,7 +820,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -841,10 +834,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tsukutabi_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "YuxBeta.ryu.developer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tsukutabi_iOS/Tsukutabi_iOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
@@ -857,10 +853,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tsukutabi_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "YuxBeta.ryu.developer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tsukutabi_iOS/Tsukutabi_iOS-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
